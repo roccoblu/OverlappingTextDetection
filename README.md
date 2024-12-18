@@ -1,6 +1,6 @@
 # OverlappingTextDetection
 
-This work is based on the paper by Huseyin Kusetogullari, Amir Yavariabdi, Johan Hall, Niklas Lavesson, [DIGITNET: A Deep Handwritten Digit Detection and Recognition Method Using a New Historical Handwritten Digit Dataset](http://dx.doi.org/10.1016/j.bdr.2020.100182).
+This work is based on the paper by Huseyin Kusetogullari, Amir Yavariabdi, Johan Hall, Niklas Lavesson; [DIGITNET: A Deep Handwritten Digit Detection and Recognition Method Using a New Historical Handwritten Digit Dataset](http://dx.doi.org/10.1016/j.bdr.2020.100182).
 
 ## Abstract
 Modern OCR systems struggle to accurately recognize overlapping text characters, particularly in historical or degraded documents. This project explores machine learning solutions to accurately detect and recognize overlapping digits by simplifying the problem to pairs of overlapped handwritten digits sourced from the MNIST dataset. Multiple methods are trained and compared: a traditional KNN classifier, CNN-based models (VGGNet, ResNet), and a more complex CNN+RNN architecture (DIGITNET). Results show that deep learning methods outperform the baseline KNN, consistently achieving high accuracy under simplified conditions. The experimental setup is constrained, but this work shows potential for more robust, real-world overlapping text recognition solutions.
