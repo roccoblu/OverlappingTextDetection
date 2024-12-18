@@ -1,1 +1,1 @@
-
+The module data_generation.py will create files vertical_data.npy, horizontal_data.npy, center_data.npy, diagonal_data.npy from the MNIST dataset and their corresponding label files vertical_label.npy, horizontal_label.npy, center_label.npy and diagonal_label.npy in this folder.
