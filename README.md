@@ -22,6 +22,28 @@ Custom dataset is created by overlapping MNIST digits in different orientations.
 1. KNN: Achieves over 80% accuracy with optimal parameters but lags behind CNN-based methods.
 2. VGGNet & ResNet: Both achieve ~98%+ accuracy after a few epochs, demonstrating that deep CNNs can handle the overlapped digits well under controlled conditions.
 3. DIGITNET: Shows ~99% accuracy, performing very well on this simplified dataset.
+
+| **Model**           | **Orientation/Metric** | **Accuracy**       | **Comments**                                                                 |
+|----------------------|-------------------------|--------------------|-------------------------------------------------------------------------------|
+| **KNN**             | Center Overwriting     | 82.5%             | Simple model with reasonable accuracy.                                       |
+|                     | Diagonal Overwriting   | 85.6%             | Best performance among KNN tests.                                           |
+|                     | Horizontal Overwriting | 84.3%             | Consistent performance.                                                     |
+|                     | Vertical Overwriting   | 83.7%             | Slightly lower but still over 80%.                                          |
+|                     | Minkowski Distance     | 85.6%             | Same as Euclidean, expected.                                                |
+|                     | Euclidean Distance     | 85.6%             | Similar to Minkowski.                                                       |
+|                     | Manhattan Distance     | 82.4%             | Slightly lower accuracy.                                                    |
+|                     | Jaccard Distance       | 86.6%             | Highest accuracy for KNN.                                                   |
+|                     | Chebyshev Distance     | 44.1%             | Performs poorly with this metric.                                           |
+| **VGGNet**          | Center Overwriting     | 98.7%             | Achieved after 10 epochs, demonstrating CNN power.                          |
+|                     | Other Orientations     | ~98.14%           | Consistently high accuracy for all orientations.                            |
+| **ResNet50**        | Center Overwriting     | 97.37%            | High accuracy, leveraging deeper architecture.                              |
+|                     | Diagonal Overwriting   | 99.59%            | Near-perfect recognition.                                                   |
+|                     | Horizontal Overwriting | 99.81%            | Best performance among ResNet cases.                                        |
+|                     | Vertical Overwriting   | 99.78%            | Consistently high performance across all orientations.                      |
+| **DIGITNET (Model 1)** | All Overwriting Cases | 99.51%            | High accuracy, demonstrates the strength of the ensemble approach.          |
+| **DIGITNET (Model 2)** | All Overwriting Cases | 98.81%            | Slightly lower than Model 1 but still very high.                            |
+| **DIGITNET (Model 3)** | All Overwriting Cases | 99.49%            | Very high accuracy, consistent with Model 1.                                |
+| **DIGITNET Ensemble** | Combined Prediction   | ~99.51% (average) | Ensemble of three CNNs ensures robustness and the highest overall accuracy. |
    
 ## Conclusion
 All deep learning models significantly outperformed KNN on the simplified overlapping digit recognition task. However, due to the controlled nature of the data, these results may not be generalized to complex real-world overlapping texts. Future work is required to expanding beyond digits, introducing more complexity, and exploring additional architectures tailored to identifying multiple overlapped characters.
