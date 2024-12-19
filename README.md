@@ -1,4 +1,4 @@
-# OverlappingTextDetection
+# Overlapping Text Detection
 
 This work is based on the paper by Huseyin Kusetogullari, Amir Yavariabdi, Johan Hall, Niklas Lavesson; [DIGITNET: A Deep Handwritten Digit Detection and Recognition Method Using a New Historical Handwritten Digit Dataset](http://dx.doi.org/10.1016/j.bdr.2020.100182).
 
